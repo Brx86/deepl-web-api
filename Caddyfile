@@ -1,3 +1,6 @@
+{
+	auto_https off
+}
 example.com {
 	@mobile {
 		header_regexp User-Agent (?i)mobile
@@ -10,7 +13,3 @@ example.com {
 		root /path/to/web
 	}
 }
-{
-	auto_https off
-}
-localhost:80
