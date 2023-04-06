@@ -17,3 +17,13 @@ https://deepl.aya1.pro/
 curl https://deepl.aya1.pro/api -d '{"text": "hello","target_lang": "ZH"}'
 # 返回结果：{"code":200,"data":"你好"}
 ```
+
+## 衍生项目：
+https://aur.archlinux.org/packages/deepl-clipboard
+
+安装：
+```bash
+paru -S deepl-clipboard
+****```
+使用：
+在系统设置里添加快捷键，命令为 `deepl-clipboard` 。之后可以复制文本并使用快捷键触发翻译界面。
