@@ -1,6 +1,3 @@
-{
-	auto_https off
-}
 example.com {
 	@mobile {
 		header_regexp User-Agent (?i)mobile
@@ -10,6 +7,6 @@ example.com {
 	uri replace /api /translate
 	reverse_proxy /translate localhost:8000
 	file_server * {
-		root /path/to/web
+		root web
 	}
 }
