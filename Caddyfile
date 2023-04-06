@@ -1,7 +1,7 @@
 example.com {
 	@mobile {
 		header_regexp User-Agent (?i)mobile
-		not path_regexp ^.+\.(?:css|js|ico|html)$
+		not path_regexp ^.+\.(?:css|js|ico|html|api)$
 	}
 	redir @mobile /m.html
 	uri replace /api /translate
