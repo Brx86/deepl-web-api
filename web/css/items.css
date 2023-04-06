@@ -1,0 +1,49 @@
+/* Blue-grey Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: #546e7a;
+    --primary-hover: #455a64;
+    --primary-focus: rgba(84, 110, 122, 0.125);
+    --primary-inverse: #FFF;
+}
+
+/* Blue-grey Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary: #546e7a;
+        --primary-hover: #607d8b;
+        --primary-focus: rgba(84, 110, 122, 0.25);
+        --primary-inverse: #FFF;
+    }
+}
+
+/* Blue-grey Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+    --primary: #546e7a;
+    --primary-hover: #607d8b;
+    --primary-focus: rgba(84, 110, 122, 0.25);
+    --primary-inverse: #FFF;
+}
+
+/* Blue-grey (Common styles) */
+:root {
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+}
+
+/* 定义提示框的样式 */
+.custom-alert {
+    position: fixed;
+    top: -100px;
+    width: 40%;
+    color: #ffffff;
+    background-color: #35515dad;
+    padding: 10px;
+    text-align: center;
+    transition: top 0.5s;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepl Translator</title>
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/items.css" />
+</head>
+
+<body>
+    <div class="grid" style="place-items: center;">
+        <div id="custom-alert" class="custom-alert"></div>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <h3 style="text-align: center;">Aya' Deepl Api</h3>
+    </div>
+    <div class="grid" style="display:flex;width: 80%;margin: auto">
+        <div class="grid" style="width: 60%;margin: auto">
+            <select id="lang-select">
+                <option value="">目标语言</option>
+                <option value="ZH">汉语</option>
+                <option value="EN">英语</option>
+                <option value="ES">西班牙语</option>
+                <option value="RU">俄语</option>
+                <option value="FR">法语</option>
+                <option value="JA">日语</option>/home/aya/code/deepl-aya/deepl-web-api/web
+            </select>
+            <button onclick="btnTranslate()">翻译</button>
+        </div>
+        <div class="grid" style="width: 40%;margin: auto">
+            <button onclick="btnCopy()">复制</button>
+            <button onclick="btnClear()">清除</button>
+        </div>
+    </div>
+    <div class="grid" style="width: 80%;margin: auto">
+        <textarea id="text-input" rows="10"></textarea>
+        <textarea id="text-output" rows="10" readonly></textarea>
+    </div>
+    <script src="js/handle.js"></script>
+</body>
+<html>
