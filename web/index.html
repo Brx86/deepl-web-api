@@ -14,12 +14,11 @@
     <div class="grid" style="place-items: center;">
         <div id="custom-alert" class="custom-alert"></div>
     </div>
-
-    <div style="margin-top: 30px;">
-        <h3 style="text-align: center;">Aya' Deepl Api</h3>
+    <div>
+        <h2><a href="https://github.com/Brx86/deepl-web-api">Aya' Deepl Api</a></h2>
     </div>
     <div class="grid" style="display:flex;width: 80%;margin: auto">
-        <select id="lang-select" style="width: 25%">
+        <select id="lang-select">
             <option value="">目标语言</option>
             <option value="ZH">汉语</option>
             <option value="EN">英语</option>
@@ -29,14 +28,15 @@
             <option value="JA">日语</option>
             <!-- ['DE', 'EN', 'ES', 'FR', 'IT', 'JA', 'NL', 'PL', 'PT', 'RU', 'ZH', 'BG', 'CS', 'DA', 'EL', 'ET', 'FI', 'HU', 'LT', 'LV', 'RO', 'SK', 'SL', 'SV'] -->
         </select>
-        <button onclick="btnTranslate()" style="width: 25%">翻译</button>
-        <button onclick="btnCopy()" style="width: 25%">复制</button>
-        <button onclick="btnClear()" style="width: 25%">清除</button>
+        <button onclick="btnTranslate()">翻译</button>
+        <button onclick="btnCopy()">复制</button>
+        <button onclick="btnClear()">清除</button>
     </div>
-    <div class="grid" style="width: 80%;margin: auto">
+    <div class="grid" id="text-box">
         <textarea id="text-input" rows="10" placeholder="在这里输入..."></textarea>
         <textarea id="text-output" rows="10" readonly></textarea>
     </div>
     <script src="js/handle.js"></script>
 </body>
+
 <html>
