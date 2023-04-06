@@ -2,8 +2,8 @@
 /* Can be forced with data-theme="light" */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-    --primary: #546e7a;
-    --primary-hover: #455a64;
+    --primary: #0B61A4;
+    --primary-hover: #3F92D2;
     --primary-focus: rgba(84, 110, 122, 0.125);
     --primary-inverse: #FFF;
 }
@@ -12,8 +12,8 @@
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
-        --primary: #546e7a;
-        --primary-hover: #607d8b;
+        --primary: #0B61A4;
+        --primary-hover: #3F92D2;
         --primary-focus: rgba(84, 110, 122, 0.25);
         --primary-inverse: #FFF;
     }
@@ -22,8 +22,8 @@
 /* Blue-grey Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme="dark"] {
-    --primary: #546e7a;
-    --primary-hover: #607d8b;
+    --primary: #0B61A4;
+    --primary-hover: #3F92D2;
     --primary-focus: rgba(84, 110, 122, 0.25);
     --primary-inverse: #FFF;
 }
@@ -42,7 +42,7 @@
     top: -100px;
     width: 40%;
     color: #ffffff;
-    background-color: #35515dad;
+    background-color: #084c7fc5;
     padding: 10px;
     text-align: center;
     transition: top 0.5s;
@@ -80,4 +80,5 @@ button {
     flex-grow: 1;
     resize: none;
     bottom: 10%;
+    color: #033E6B;
 }
