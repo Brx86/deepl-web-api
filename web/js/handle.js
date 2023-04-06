@@ -2,6 +2,8 @@ const langSelect = document.getElementById("lang-select");
 const textInput = document.getElementById("text-input");
 const textOutput = document.getElementById("text-output");
 const customAlert = document.getElementById("custom-alert");
+const api_url = `${window.location.protocol}//${window.location.hostname}/api`
+
 function myAlert(message) {
     customAlert.textContent = message;
     customAlert.style.top = "30px";
@@ -9,7 +11,7 @@ function myAlert(message) {
         customAlert.style.top = "-100px";
     }, 2000);
 }
-function btnTranslate() {
+async function btnTranslate() {
     let lang_select = langSelect.value;
     let text_input = textInput.value.trim();
     if (lang_select === "") {
@@ -22,24 +24,23 @@ function btnTranslate() {
     }
     customAlert.textContent = "加载中...";
     customAlert.style.top = "30px";
-    fetch(`${window.location.protocol}//${window.location.hostname}/api`, {
-        method: 'POST',
-        body: JSON.stringify({ text: text_input, target_lang: lang_select })
-    })
-        .then(response => response.json())
-        .then(r => {
-            customAlert.style.top = "-100px";
-            textOutput.value = r.data;
-        });
+    let body_json = JSON.stringify({ text: text_input, target_lang: lang_select })
+    let response = await fetch(api_url, { method: 'POST', body: body_json })
+    let r = await response.json()
+    customAlert.style.top = "-100px";
+    textOutput.value = r.data;
 }
-function btnCopy() {
+async function btnCopy() {
     if (textOutput.value === "") {
         myAlert("内容为空！")
         return;
     }
-    textOutput.select();
-    document.execCommand('copy');
-    myAlert("已复制！")
+    try {
+        await navigator.clipboard.writeText(textOutput.value);
+        myAlert('复制成功');
+    } catch (error) {
+        myAlert('复制失败');
+    }
 }
 function btnClear() {
     textInput.value = ""
