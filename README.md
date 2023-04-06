@@ -24,6 +24,11 @@ https://aur.archlinux.org/packages/deepl-clipboard
 安装：
 ```bash
 paru -S deepl-clipboard
-****```
-使用：
+```
+使用： 
+
 在系统设置里添加快捷键，命令为 `deepl-clipboard` 。之后可以复制文本并使用快捷键触发翻译界面。
+
+界面截图：
+
+![截图_2023-04-06_17-10-55](https://user-images.githubusercontent.com/44391900/230331025-a978d098-b761-4d31-a42e-13e1c3395918.png)
