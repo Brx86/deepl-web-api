@@ -14,12 +14,11 @@
     <div class="grid" style="place-items: center;">
         <div id="custom-alert" class="custom-alert"></div>
     </div>
-
-    <div style="margin-top: 30px;">
+    <div>
         <h2><a href="https://github.com/Brx86/deepl-web-api">Aya' Deepl Api</a></h2>
     </div>
-    <div class="grid" style="display:flex;width: 80%;margin: auto">
-        <div class="grid" style="width: 60%;margin: auto">
+    <div class="grid" id="btn-box">
+        <div class="grid">
             <select id="lang-select">
                 <option value="">目标语言</option>
                 <option value="ZHGPT">汉语 - Chatgpt</option>
@@ -32,12 +31,12 @@
             </select>
             <button onclick="btnTranslate()">翻译</button>
         </div>
-        <div class="grid" style="width: 40%;margin: auto">
+        <div class="grid">
             <button onclick="btnCopy()">复制</button>
             <button onclick="btnClear()">清除</button>
         </div>
     </div>
-    <div class="grid" style="width: 80%;margin: auto">
+    <div class="grid" id="text-box">
         <textarea id="text-input" rows="10" placeholder="在这里输入..."></textarea>
         <textarea id="text-output" rows="10" readonly></textarea>
     </div>

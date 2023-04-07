@@ -48,7 +48,45 @@
     transition: top 0.5s;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#btn-box {
+    display: flex;
+    width: 80%;
+    margin: auto
+}
+
+#btn-box>div:nth-child(1) {
+    width: 60%;
+    margin: auto
+}
+
+#btn-box>div:nth-child(2) {
+    width: 40%;
+    bottom: 10%;
+    margin: auto
+}
+
+#text-box {
+    flex: 1;
+    width: 80%;
+    margin: auto;
+}
+
 #text-input,
 #text-output {
+    flex-grow: 1;
+    resize: none;
     color: #033E6B;
 }
