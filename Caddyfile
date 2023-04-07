@@ -1,10 +1,14 @@
-example.com {
+{
+	auto_https off
+}
+localhost:80 {
 	@mobile {
 		header_regexp User-Agent (?i)mobile
-		not path_regexp ^.+\.(?:css|js|ico|html|api)$
+		not path_regexp ^.+(?:css|js|ico|html|api|gpt)$
 	}
 	redir @mobile /m.html
 	uri replace /api /translate
+	reverse_proxy /gpt localhost:3000
 	reverse_proxy /translate localhost:8000
 	file_server * {
 		root web
